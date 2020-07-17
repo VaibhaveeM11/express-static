@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+   t 
+    <h1>Jquery</h1>
+    <div id='box' style="width:300px;height:400px;background-color:green"></div>
+        <button id="btn1">Show Me</button>
+        <button id="btn2">Hide</button>
+        <button id="toggle">toggle</button>
+          <button id='getjson'></button>
+             <input type="text" class="power" value="">
+    
+    <script>
+        $(document).ready(function(){
+
+                    $('#box').click(function()
+                    {
+                        if($(this).html()==='clicked me')
+                        { 
+                             $(this).html('why you are clicked me....!');
+                        }
+                        else
+                        {
+                        $(this).html('clicked me');
+                        }
+                    });
+
+                    $('#box').hover(function()
+                    {
+                             $(this).css('background-color','blue');
+                    });
+
+                    $('#box').mouseleave(function()
+                    {
+                           $(this).css('background-color','green');
+                    });
+                    //show hide toggle
+                    $('#btn1').click(function()
+                    {
+                        $('#box').show();
+                    });
+                    $('#btn2').click(function()
+                    {
+                       $('#box').hide();
+                    });
+
+                    $('#toggle').click(function(){
+
+                        $('#box').toggle();
+
+                    });
+                    // value from input into div
+                    $('.power').keyup(function(){
+                        $('#box').html($(this).val());
+                    });
+        });
+    </script>
+</body>
+</html>
